@@ -16,13 +16,15 @@ umi.use(mplTokenMetadata())
 
 const mint = generateSigner(umi);
 
-const metadataUri = 'https://gateway.irys.xyz/85ZTCm6xjV2A8o6tZqSH71pg1X7oqiwE3Xau1Fzckk5d';
+// const metadataUri = 'https://gateway.irys.xyz/85ZTCm6xjV2A8o6tZqSH71pg1X7oqiwE3Xau1Fzckk5d';
+const metadataUri = 'https://gateway.irys.xyz/2gRjPViL4sFa8fAz3trMXTkEt2vuFVibmE48hn3VKkkV';
 
 (async () => {
     const result = await createNft(umi, {
         mint,
         sellerFeeBasisPoints: percentAmount(10),
-        name: 'Rug Man',
+        name: "Generug",
+        symbol: "GENERUG",
         uri: metadataUri,
     }).sendAndConfirm(umi);
 
@@ -30,7 +32,14 @@ const metadataUri = 'https://gateway.irys.xyz/85ZTCm6xjV2A8o6tZqSH71pg1X7oqiwE3X
 
     console.log(`Successfully Minted! TX here:\n${getTxExplorerUrl(signature)}`);
     console.log("Mint Address: ", mint.publicKey);
+    // Rug Man
     // https://explorer.solana.com/tx/4qNCk6CZRaJE3LPzqH9tZkiXXtptDiCEcXQSKEHcSZfCYXTgF7i6iq89tH3nLYyxy1Q9yPNoStPN6eRCMLbeLxm6?cluster=devnet
     // Mint Address:  7GJvmNtgH3Fpccd2gHdLWqCbS2HiP7MZA2mFN3at38XD
     // NFT: https://explorer.solana.com/address/7GJvmNtgH3Fpccd2gHdLWqCbS2HiP7MZA2mFN3at38XD/metadata?cluster=devnet
+
+    // Generug
+    // Successfully Minted! TX here:
+    // https://explorer.solana.com/tx/3UjF9QnWmH4ryqBR5MwLo889xucdwdG21iwkfVUHQ2Ljhgge9u8jcdpxXuwhbbrmVCUStffcmjt6Vi4pw2ZFyfu3?cluster=devnet
+    // Mint Address:  CwwnC45ZJwibMKHbnM8wwbP6UnPx6WLt8iYVnQKt1gSo
+    // NFT: https://explorer.solana.com/address/CwwnC45ZJwibMKHbnM8wwbP6UnPx6WLt8iYVnQKt1gSo?cluster=devnet
 })().then(() => process.exit(0));

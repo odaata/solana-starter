@@ -19,9 +19,14 @@ umi.use(signerIdentity(signer));
 // const giraffeIconPath = path.resolve(__dirname, '../../../../Giraffe_SPL_Token_icon.png');
 // https://gateway.irys.xyz/DgjeZa9EooEXHBGvDgzVP5vtoAydbDjB8s9hcsLdGmPH
 
-const nftRugFieldPath = path.resolve(__dirname, './lib/NFT_Image_Rug_Field.png');
-const nftRugFieldName = 'RugMan.png';
+// const nftRugFieldPath = path.resolve(__dirname, './lib/NFT_Image_Rug_Field.png');
+// const nftRugFieldName = 'RugMan.png';
 // Your image URI:  https://gateway.irys.xyz/HR7jBHKBEjnmkBtg7RTXzeZRHTEy3LnUVjh5BoVFDRse
+
+const nftRugFieldPath = path.resolve(__dirname, './lib/generug_random_20.png');
+const nftRugFieldName = 'Generug.png';
+
+// Your image URI:  https://gateway.irys.xyz/CbvaQAHsgYCZYkgQDmeSxnmHSkmyCaj5jXs25gxJ3KW2
 
 export async function uploadImage(imagePath: string, irysFileName: string) {
     try {
